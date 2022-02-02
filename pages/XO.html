@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    body {
+      height: 500px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .game {
+      width: 330px;
+      height: 330px;
+      border: 5px rgb(0, 119, 103) solid;
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border: 5px rgb(0, 119, 103) solid;
+      float: left;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      color: rgb(0, 119, 103);
+      font-size: 300%;
+    }
+  </style>
+  <div class="game" id="game">
+
+  </div>
+
+  </div>
+  <script>
+    let x = document.getElementById('game').innerHTML;
+    for (let a = 0; a < 9; a++) {
+      document.getElementById('game').innerHTML += '<div class="block" id="block"></div>';
+    }
+    let hod = 0
+    document.getElementById('game').onclick = function (event) {
+      if (event.target.className == 'block') {
+
+        if (hod == 1) {
+          event.target.innerHTML = 'X';
+          hod = 0
+        } else {
+          event.target.innerHTML = '0';
+          hod = 1
+        }
+
+        setInterval(checkWinner, 100)
+
+      }
+
+    }
+    let W = false
+
+    function checkWinner() {
+      let allblock = document.getElementsByClassName('block');
+
+
+
+
+
+      if (W == false && allblock[0].innerHTML == 'X' && allblock[1].innerHTML == 'X' && allblock[2].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[3].innerHTML == 'X' && allblock[4].innerHTML == 'X' && allblock[5].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[6].innerHTML == 'X' && allblock[7].innerHTML == 'X' && allblock[8].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[0].innerHTML == 'X' && allblock[3].innerHTML == 'X' && allblock[6].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[1].innerHTML == 'X' && allblock[4].innerHTML == 'X' && allblock[7].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[2].innerHTML == 'X' && allblock[5].innerHTML == 'X' && allblock[8].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+      if (W == false && allblock[0].innerHTML == 'X' && allblock[4].innerHTML == 'X' && allblock[8].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+
+      }
+      if (W == false && allblock[2].innerHTML == 'X' && allblock[4].innerHTML == 'X' && allblock[6].innerHTML == 'X') {
+        alert('X Wins');
+        W = true
+
+      }
+
+      if (W == false && allblock[0].innerHTML == '0' && allblock[1].innerHTML == '0' && allblock[2].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[3].innerHTML == '0' && allblock[4].innerHTML == '0' && allblock[5].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[6].innerHTML == '0' && allblock[7].innerHTML == '0' && allblock[8].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[0].innerHTML == '0' && allblock[3].innerHTML == '0' && allblock[6].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[1].innerHTML == '0' && allblock[4].innerHTML == '0' && allblock[7].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[2].innerHTML == '0' && allblock[5].innerHTML == '0' && allblock[8].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[0].innerHTML == '0' && allblock[4].innerHTML == '0' && allblock[8].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == false && allblock[2].innerHTML == '0' && allblock[4].innerHTML == '0' && allblock[6].innerHTML == '0') {
+        alert('0 Wins');
+        W = true
+
+      }
+      if (W == true) {
+        document.getElementById('game').innerHTML = '';
+        for (let a = 0; a < 9; a++) {
+          document.getElementById('game').innerHTML += '<div class="block" id="block"></div>';
+        }
+        W = false
+      }
+    }
+  </script>
+</body>
+
+</html>
