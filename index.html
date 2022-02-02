@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>SnakeGame</title>
-
-	<style>
-		
-canvas {
-	display: block;
-	margin-top: 30px;
-	margin-right: auto;
-	margin-left: auto;
-	border: 1px solid black;
-}
-
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
+
 <body>
-	<canvas></canvas>
-	<script src="snake.js"></script>
-	<script src="script1.js"></script>
-</body>
-</html>
+    <html>
+
+    <head>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <div class="contain">
+            <div class="top">
+                <div class="logo"><img src="img/logo.png" width="60" height="60"></div>
+
+                <div class="st2">
+                    <p class="ss" id="s1">Крестики-Нолики</p>
+                    <p class="ss" id="s2">Змейка</p>
+                    <p class="ss" id="s3">ССЫЛКА1</p>
+                    <p class="ss" id="s4">ССЫЛКА2</p>
+                    <div class="p3" id="x"><img src="img/menu-512.png" width="40" height="40"></div>
+                </div>
+
+
+            </div>
+            <div class="sss" id="s">
+                <div class="ss1" id="S1">Крестики-Нолики</div>
+                <div class="ss1" id="S2">Змейка</div>
+                <div class="ss1" id="S3">ССЫЛКА1</div>
+                <div class="ss1" id="s4">ССЫЛКА1</div>
+            </div>
+
+            <iframe id="XO" class="XO" src="pages/XO.html" width="100%" height="520" title="XO"></iframe>
+            <iframe id="snake" class="snake" src="pages/snake.html" width="100%" height="610" title="snake"></iframe>
+        </div>
+
+
+        <script src="js/script.js">
+        
+        </script>
+    </body>
+
+    </html>
+
+
